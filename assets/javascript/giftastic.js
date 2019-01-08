@@ -1,4 +1,5 @@
 var topics = ["Poker", "Mario", "Dice", "Dominoes", "Dungeons and Dragons"];
+var limit = 10;
 
 
 $(document).ready(function() {
@@ -22,7 +23,7 @@ function submitButtonClicked() {
 
 function searchGif(gifName) {
     $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=dc6zaTOxFJmzC',
+            url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=dc6zaTOxFJmzC&limit=' + limit,
             type: 'GET',
         })
         .done(function(response) {
